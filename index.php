@@ -12,15 +12,13 @@ $rows = $results->fetch_all(MYSQLI_ASSOC);
       <div class="container front">
         <form class="" action="search.php" method="post">
           <h3>Welcome, nice to meet you and I want to know more about you</h3>
-          <!-- <input type="text" name="search" placeholder="Enter the title...." class="form-control" value="">
-          <button type="submit" name="submit" class="btn btn-outline-light btn-lg mt-3"><i class="fa fa-search mr-2"></i>Search</button> -->
+          
         </form>
       </div>
     </div>
 
     <div class="container post">
-      <h2 class="display-4">Posts</h2>
-      <hr>
+      <h2 class="display-4">Recent Posts</h2>
       <div class="row">
         <?php
         $posts = getPosts(12, $conn);

@@ -20,13 +20,13 @@ if(isset($_POST['submit'])) {
 <?php else:?>
       <div class="col-md-6 mt-5">
         <form class="" action="create.php" method="post" enctype="multipart/form-data">
-          <label for="title">Title</label>
+          <label for="title">Post</label>
           <input type="text" name="title" placeholder="Input your title..." class="form-control mb-3" value="">
-          <label for="content">Content</label>
+          <label for="content">Body</label>
           <textarea name="content" class="form-control mb-3" placeholder="Input your content..." rows="8" cols="80"></textarea>
-          <label for="img">Image Address</label>
-          <input type="file" name="img" value="" class="mt-3 mb-3 form-control">
-          <button type="submit" name="submit" style="margin-left: 33%;" class="btn btn-danger mt-3"><i class="fas fa-pen mr-2"></i>Create</button>
+          <label for="img">Image</label>
+          <input type="file" name="img" value="" class=" mb-3 form-control">
+          <button type="submit" name="submit" style="margin-left: 33%;" class="btn btn-danger mt-3">Create</button>
         </form>
       </div>
       <div class="col-md-6">

@@ -26,13 +26,7 @@ a.dark {
 a.dark:hover {
   color: white !important;
 }
-a.title{
-color: black;
-}
 
-.container.post {
-  background: url(https://i.pinimg.com/564x/6f/78/68/6f78682887d092fa499108a0aaa4e028.jpg);
-}
 
 hr{
 border-top: 3px dashed #8c8b8b;

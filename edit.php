@@ -58,7 +58,7 @@ if(isset($_GET['id']) && $_SESSION['loggedin'] == true){
          <img src="<?php echo $img ?>" style='max-width:100%'>
          <input type="file" name="img" value="" class="mt-3 mb-3 form-control">
          <input type="number" name="postid" value="<?php echo $_GET['id'];?>" hidden>
-         <button type="submit" name="submit" style="margin-left: 33%;" class="btn btn-lg btn-dark mt-3"><i class="fas fa-edit mr-2"></i>Update</button>
+         <button type="submit" name="submit" style="margin-left: 33%;" class="btn btn-lg btn-danger mt-3">Update</button>
        </form>
      </div>
      <div class="col-md-6 ">

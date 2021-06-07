@@ -15,7 +15,7 @@ include 'config.php';
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><i class="fas fa-home mr-2"></i>BLOG</a>
+            <a class="navbar-brand" href="index.php"><i class=""></i>BLOG</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">

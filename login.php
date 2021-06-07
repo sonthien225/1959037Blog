@@ -93,40 +93,38 @@ if (isset($_POST['create'])) {
 ?>
 <div class="container">
   <div class="row">
-    <div class="col-md-6 mt-5 ">
+    <div class="col-md-6 mt-2 mb-5">
       <h3>Create Account</h3>
-      <hr>
       <form class="" action="login.php" method="post">
-        <label for="username">Name</label>
-        <input type="text" name="username" placeholder="Enter your name here..." class="form-control" value="">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Enter your name" class="form-control" value="">
         <p class="error"><?php if (isset($errors['errname'])) { echo htmlspecialchars($errors['errname']);} ?></p>
         <label for="email">Email</label>
-        <input type="text" name="email" placeholder="Enter your email here..." class="form-control" value="">
+        <input type="text" name="email" placeholder="Enter your email" class="form-control" value="">
         <p class="error"><?php if (isset($errors['erremail'])) { echo htmlspecialchars($errors['erremail']);} ?></p>
         <label for="password1">Password</label>
-        <input type="password" name="password1" placeholder="Enter your first password here..." class="form-control" value="">
+        <input type="password" name="password1" placeholder="Enter your first password" class="form-control" value="">
         <p class="error"><?php if (isset($errors['errpassword'])) { echo htmlspecialchars($errors['errpassword']);} ?></p>
         <label for="password2">Rewrite Password</label>
-        <input type="password" name="password2" placeholder="Enter your second password here..." class="form-control" value="">
+        <input type="password" name="password2" placeholder="Enter your second password" class="form-control" value="">
         <p class="error"><?php if (isset($errors['errpassword2'])) { echo htmlspecialchars($errors['errpassword2']);} ?></p>
-        <label for="gender">Gender</label> <br>
-        <input type="radio" name="gender" value="">Male <br>
-        <input type="radio" name="gender" value="">Female <br>
+        <label for="gender">Sexuality</label> <br>
+        <input type="checkbox" name="gender" value="">Male <br>
+        <input type="checkbox" name="gender" value="">Female <br>
         <p class="error"><?php if (isset($errors['errgender'])) { echo htmlspecialchars($errors['errgender']);} ?> <br></p>
-        <button type="submit" name="create" style="margin-left: 35%;" class="btn btn-lg btn-danger mt-3"><i class="fa fa-plus"></i> Create Account</button>
+        <button type="submit" name="create"  class="btn btn-lg btn-danger mt-3"> Create Account</button>
       </form>
     </div>
-    <div class="col-md-6 mt-5">
+    <div class="col-md-6 mt-2 mb-5">
       <h3>Login</h3>
-      <hr>
       <form class="" action="login.php" method="post">
         <label for="name">Username</label>
-        <input type="text" name="name" class="form-control" placeholder="Input your username..." value="<?php if (isset($name)) { echo htmlspecialchars($name);} ?>">
+        <input type="text" name="name" class="form-control" placeholder="Input your username" value="<?php if (isset($name)) { echo htmlspecialchars($name);} ?>">
         <p class="error"><?php if(isset($errors['login_username'])) {echo htmlspecialchars($errors['login_username']);} ?></p>
         <label for="password">Password</label>
-        <input type="password" name="password" class="form-control" placeholder="Input your username..." value="">
+        <input type="password" name="password" class="form-control" placeholder="Input your username" value="">
         <p class="error"><?php if(isset($errors['login_password'])) {echo htmlspecialchars($errors['login_password']);} ?></p>
-        <button type="submit" name="submit" style="margin-left: 35%;" class="btn btn-lg btn-danger mt-3"><i class="fa fa-check"></i> Login</button>
+        <button type="submit" name="submit"  class="btn btn-lg btn-danger mt-3"> Login</button>
       </form>
     </div>
   </div>

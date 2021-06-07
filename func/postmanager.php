@@ -73,7 +73,7 @@ function getPosts($num_posts, $conn, $limit = 12, $offset = 0) {
   return $results->fetch_all(MYSQLI_ASSOC);
 }
 
-function outputPosts($posts, $col = 6, $img = true, $teaserlen = 150, $readmore = true) {
+function outputPosts($posts, $col = 4, $img = true, $teaserlen = 150, $readmore = true) {
   $output = "";
   foreach ($posts as $post) {
     if($img == true) {
@@ -88,38 +88,24 @@ function outputPosts($posts, $col = 6, $img = true, $teaserlen = 150, $readmore 
     }
     $body = substr($post['Content'], 0, $teaserlen);
     $output.= "<div class='col-md-{$col}'> {$postimg}
-    <h3 class='font-weight-light text-center'><a class='title' href='article.php?id={$post['ID']}'>Title : {$post['Title']}</a></h3>
-    <h4 class='text-center'>Author: <em>{$post['Author']}</em></h4>
-    <p class='text-center'>Content : {$body}</p>
+    <h4 class='text-center'>User: <em>{$post['Author']}</em></h4>
+    <h4 class='font-weight-light text-center'><a class='title' href='article.php?id={$post['ID']}'>Post : {$post['Title']}</a></h4>
+    <p class='text-center'>Body : {$body}</p>
     <div class='row'>
-      <div class='col-md-4 mb-2'>
-        <button type='button' name='' class='btn btn-lg btn-dark mt-3'><i class='far fa-edit mr-2'></i> <a href='edit.php?id={$post['ID']}'>Edit Post</a> </button>
+      <div class='col-md-4 '>
+        <button type='button' name='' class='btn btn-lg btn-secondary mt-3' style='color: black;'><a href='edit.php?id={$post['ID']}'>Edit Post</a> </button>
         </div>
-        <div class='col-md-4 mb-2'>
-        <button type='button' name='' class='btn btn-lg btn-success mt-3'><i class='far fa-comments mr-2'></i> <a href='cmt.php?id={$post['ID']}'>Comment</a> </button>
+        <div class='col-md-4 '>
+        <button type='button' name='' class='btn btn-lg btn-secondary mt-3' style='color: black;'><a href='comment.php?id={$post['ID']}'>Comment</a> </button>
         </div>
-        <div class='col-md-4 mb-2'>
-        <button type='button' name='' class='btn btn-lg btn-danger mt-3'><i class='far fa-trash-alt mr-2'></i> <a href='delete.php?id={$post['ID']}'>Delete</a> </button>
+        <div class='col-md-4'>
+        <button type='button' name='' class='btn btn-lg btn-secondary mt-3' style='color: black;'><a href='delete.php?id={$post['ID']}'>Delete</a> </button>
       </div>
-    </div>    </div>";
+    </div>
+    </div>";
   }
   return $output;
 }
-
-// public function deletePost() {
-//   $sql = "DELETE FROM posts WHERE id = ?";
-//   $stmt = $this->conn->prepare($sql);
-//   $stmt->bind_param("i", $this->id);
-//   $stmt->execute();
-//   if($stmt->affected_rows == 1) {
-//     echo "<h1 class='display-2'>Post was deleted!</h1>".
-//     "<a href='index.php?id=1'><button class='btn btn-primary'>Return Home</button></a>";
-//   } else {
-//    echo '<div class="alert alert-danger" role="alert">
-//       Row not found or deleted!
-//     </div>';
-//   }
-// }
 
 function redirectToPost($id, $get = false) {
   $location = "Location: index.php?id=". $id . "&created=true";
