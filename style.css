@@ -1,0 +1,39 @@
+button a {
+  color: white !important;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+}
+
+.navbar{
+  background-color: rgb(212, 55, 63);
+}
+
+.jumbotron.jumbotron-fluid {
+  margin-bottom: 0px;
+  background: url(https://i.pinimg.com/736x/0d/ac/37/0dac37e02f9249c82c43a43734862445.jpg);
+}
+
+h3 {
+  color: rgb(92, 20, 20);
+}
+a.dark {
+  color: black !important;
+}
+
+a.dark:hover {
+  color: white !important;
+}
+a.title{
+color: black;
+}
+
+.container.post {
+  background: url(https://i.pinimg.com/564x/6f/78/68/6f78682887d092fa499108a0aaa4e028.jpg);
+}
+
+hr{
+border-top: 3px dashed #8c8b8b;
+}
